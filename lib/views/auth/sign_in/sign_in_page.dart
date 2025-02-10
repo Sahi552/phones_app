@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:phones_app/views/auth/sign_in/verification_page.dart';
+import 'package:phones_app/views/auth/verification/verification_page.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
