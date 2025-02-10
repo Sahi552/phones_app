@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:phones_app/views/auth/sign_in/verification_page.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class SignupPage extends StatelessWidget {
+  const SignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +20,11 @@ class SignInPage extends StatelessWidget {
             SizedBox(height: 100),
             Text("WELCOME"),
             SizedBox(height: 20),
-            Text("Sign in to continue"),
-            Text("Enter Your Phone Number"),
+            Text("Please Tell Us Your Name *"),
             TextFormField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
               ),
-            ),
-            Row(
-              children: [
-                Checkbox(value: false, onChanged: null),
-                Text("Accept Terms and condition")
-              ],
             ),
             SizedBox(height: 20),
             GestureDetector(
@@ -44,19 +36,21 @@ class SignInPage extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    "Next ->",
+                    "Confirm Name",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => VerificationPage(),
-                  ),
-                );
-              },
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) {
+              //         null
+              //       },
+              //     ),
+              //   );
+              // },
             ),
             // showBottomSheet(
             //   context: context,
