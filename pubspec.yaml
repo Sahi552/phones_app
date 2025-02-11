@@ -45,6 +45,8 @@ flutter:
     - asset/banners/three/
     - asset/banners/four/
     - asset/banners/five/
+    - asset/options/
+    - asset/brands/
 
   fonts:
     - family: Poppins

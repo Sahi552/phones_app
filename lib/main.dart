@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:phones_app/views/home/homescreen_page.dart';
+import 'package:phones_app/views/home/homescreen_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         useMaterial3: true,
       ),
-      home: HomescreenPage(),
+      home: HomescreenView(),
     );
   }
 }

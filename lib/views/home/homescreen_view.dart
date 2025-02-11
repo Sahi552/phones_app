@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:phones_app/utils/assets/assests.dart';
-import 'package:phones_app/views/home/widgets/banner_slider.dart';
+import 'package:phones_app/views/home/widgets/banners/banner_slider.dart';
+import 'package:phones_app/views/home/widgets/brands/brand_view.dart';
+import 'package:phones_app/views/home/widgets/options/option_view.dart';
 
-class HomescreenPage extends StatelessWidget {
-  const HomescreenPage({super.key});
+class HomescreenView extends StatelessWidget {
+  const HomescreenView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -62,9 +64,82 @@ class HomescreenPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 10),
             BannerSlider(),
-            SizedBox(height: 30),                        
+            SizedBox(height: 10),
+            SizedBox(
+              height: 24,
+              width: 196,
+              child: Text(
+                "Whats on your mind ?",
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+            SizedBox(height: 10),
+            OptionView(),
+            SizedBox(height: 10),
+            SizedBox(
+              height: 18,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Top brands",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 18,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
+            BrandView(),
+            SizedBox(height: 10),
+            Center(
+              child: Container(
+                width: 105,
+                height: 51,
+                decoration: BoxDecoration(
+                  color: Color(0xFF363636),
+                  borderRadius: BorderRadius.circular(30),
+                  border: Border.all(color: Color(0xFFF6C018), width: 4),
+                ),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "sell",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xFFF6C018),
+                        ),
+                      ),
+                      Icon(
+                        Icons.add,
+                        color: Color(0xFFF6C018),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            SizedBox(
+              height: 24,
+              width: 196,
+              child: Text(
+                "Beast deals in India",
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
           ],
         ),
       ),
