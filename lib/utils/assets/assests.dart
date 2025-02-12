@@ -5,6 +5,7 @@ const String baseBrandUrl = "asset/brands";
 
 class Assests {
   static String appLogo = "$baseAssetUrl/logo.png";
+  static String splash = "asset/splash/Splash.json";
 }
 
 class PhoneBanners {

@@ -9,19 +9,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  
   carousel_slider: ^5.0.0
   cupertino_icons: ^1.0.8
+  lottie: ^3.3.1
   #state mangement
   stacked_services: ^1.6.0
   stacked: ^3.4.4 
   #otp  
   pinput: ^5.0.1
-  #routing
-  auto_route: ^9.3.0+1
+  # #routing
+  # auto_route: ^9.3.0+1
   #inversion of control
   get_it: ^8.0.3
-  injectable: ^2.5.0
+  injectable: ^2.5.0  
 
 dev_dependencies:
   flutter_test:
@@ -30,7 +31,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   build_runner: ^2.4.14
   stacked_generator: ^1.6.1
-  auto_route_generator: ^9.0.0  
+  # auto_route_generator: ^9.0.0  
   injectable_generator: ^2.6.2
 
 
@@ -39,14 +40,20 @@ flutter:
   uses-material-design: true
 
   assets:
+    #splash
+    - asset/splash/
+    #other_images
     - asset/images/
+    #banners
     - asset/banners/one/
     - asset/banners/two/
     - asset/banners/three/
     - asset/banners/four/
     - asset/banners/five/
+    #options
     - asset/options/
-    - asset/brands/
+    #brands
+    - asset/brands/    
 
   fonts:
     - family: Poppins

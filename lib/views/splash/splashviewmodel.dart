@@ -1,12 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+import 'package:phones_app/views/home/homescreen_view.dart';
 import 'package:stacked/stacked.dart';
 
+@injectable
 class Splashviewmodel extends BaseViewModel {
-  int _value = 0;
+  final BuildContext _context;
 
-  int get value => _value;
+  Splashviewmodel(this._context);
 
-  void increment() {
-    _value++;
-    notifyListeners();
+  void timer()  {
+    Future.delayed(Duration(seconds: 5));
+    Navigator.push(
+      _context,
+      MaterialPageRoute(
+        builder: (context) => HomescreenView(),
+      ),
+    );
   }
 }

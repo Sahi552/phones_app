@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:phones_app/views/home/homescreen_view.dart';
+import 'package:phones_app/views/splash/splashview.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Stacked State management',
       theme: ThemeData(
         fontFamily: 'Poppins',
         useMaterial3: true,
       ),
-      home: HomescreenView(),
+      home: Splashview(),
     );
   }
 }

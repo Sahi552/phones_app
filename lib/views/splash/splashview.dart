@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:phones_app/utils/assets/assests.dart';
 import 'package:phones_app/views/splash/splashviewmodel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -8,16 +10,18 @@ class Splashview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
-      viewModelBuilder: () => Splashviewmodel(),
-      builder: (context, model, _) {
-        return Scaffold(
-          body: Center(
-            child: Text("hello ${model.value}"),
-          ),
-          floatingActionButton:
-              FloatingActionButton(onPressed: (model.increment)),
-        );
-      },
-    );
+        viewModelBuilder: () => Splashviewmodel(context),
+        onViewModelReady: (model) => model.timer(),
+        builder: (context, model, _) {
+          return Scaffold(
+            body: ListView(
+              children: [
+                LottieBuilder.asset(
+                  Assests.splash,
+                ),
+              ],
+            ),
+          );
+        });
   }
 }
